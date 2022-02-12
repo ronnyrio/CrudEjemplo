@@ -1,0 +1,5 @@
+com\javatpoint\repository\StudentRepository.class
+com\javatpoint\service\StudentService.class
+com\javatpoint\model\Student.class
+com\javatpoint\SpringBootH2DatabaseExampleApplication.class
+com\javatpoint\controller\StudentController.class

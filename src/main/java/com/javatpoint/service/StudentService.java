@@ -3,15 +3,16 @@ package com.javatpoint.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.javatpoint.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.javatpoint.model.Student;
-import com.javatpoint.repository.StudentRepository;
 
 //defining the business logic
 @Service
 public class StudentService {
-    @Autowired
+
+
     StudentRepository studentRepository;
 
     //getting all student records

@@ -12,7 +12,6 @@ import javax.persistence.Table;
 public class Student {
     //mark id as primary key
     @Id
-//defining id as column name
     @Column
     private int id;
     //defining name as column name

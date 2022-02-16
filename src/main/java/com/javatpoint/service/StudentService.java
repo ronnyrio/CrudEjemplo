@@ -12,12 +12,12 @@ import com.javatpoint.model.Student;
 @Service
 public class StudentService {
 
-
+@Autowired
     StudentRepository studentRepository;
 
     //getting all student records
     public List<Student> getAllStudent() {
-        List<Student> students = new ArrayList<Student>();
+        List<Student> students = new ArrayList<>();
         studentRepository.findAll().forEach(student -> students.add(student));
         return students;
     }

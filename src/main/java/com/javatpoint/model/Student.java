@@ -1,9 +1,6 @@
 package com.javatpoint.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 //mark class as an Entity
 @Entity
@@ -12,7 +9,7 @@ import javax.persistence.Table;
 public class Student {
     //mark id as primary key
     @Id
-    @Column
+    @GeneratedValue
     private int id;
     //defining name as column name
     @Column

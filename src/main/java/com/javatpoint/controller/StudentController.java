@@ -1,6 +1,7 @@
 package com.javatpoint.controller;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -39,7 +40,7 @@ public class StudentController {
 
     //creating post mapping that post the student detail in the database
     @PostMapping("/student")
-    private int saveStudent(@RequestBody Student student) {
+    private UUID saveStudent(@RequestBody Student student) {
         studentService.saveOrUpdate(student);
         return student.getId();
     }

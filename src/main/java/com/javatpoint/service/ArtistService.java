@@ -1,8 +1,7 @@
 package com.javatpoint.service;
 
+
 import com.javatpoint.model.Artist;
-import com.javatpoint.model.Artist;
-import com.javatpoint.repository.ArtistRepository;
 import com.javatpoint.repository.ArtistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,14 +9,15 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Service
 public class ArtistService {
-    
+
     @Autowired
     ArtistRepository artistRepository;
 
     public List<Artist> getAllArtist() {
-        List<Artist> artists = new ArrayList<Artist>();
+        List<Artist> artists = new ArrayList<>();
         artistRepository.findAll().forEach(artist -> artists.add(artist));
         return artists;
     }

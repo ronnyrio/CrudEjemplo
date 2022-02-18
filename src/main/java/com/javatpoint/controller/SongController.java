@@ -3,9 +3,15 @@ package com.javatpoint.controller;
 import com.javatpoint.model.Song;
 import com.javatpoint.service.SongService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.UUID;
 
 //creating RestController
 @RestController
@@ -34,7 +40,7 @@ public class SongController {
 
     //creating post mapping that post the song detail in the database
     @PostMapping("/song")
-    private int saveSong(@RequestBody Song song) {
+    private UUID saveSong(@RequestBody Song song) {
         songService.saveOrUpdate(song);
         return song.getId();
     }

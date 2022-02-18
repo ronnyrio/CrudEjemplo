@@ -2,7 +2,11 @@ package com.javatpoint.model;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.UUID;
 
 //mark class as an Entity
@@ -24,15 +28,14 @@ public class Student {
             }
     )
     @Column(name = "id", updatable = false, nullable = false)
-
     private UUID id;
-    //defining name as column name
+
     @Column
     private String name;
-    //defining age as column name
+
     @Column
     private int age;
-    //defining email as column name
+
     @Column
     private String email;
 
